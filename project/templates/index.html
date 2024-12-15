@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL短縮</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type="url"] {
+            width: 80%; /* 幅を画面幅の80%に設定 */
+            height: 40px; /* 高さを40pxに設定 */
+            font-size: 18px; /* テキストサイズを大きくする */
+            padding: 10px; /* 内側の余白を追加 */
+            border: 1px solid #ccc; /* 枠線 */
+            border-radius: 5px; /* 角を丸める */
+            box-sizing: border-box; /* パディングを含めた全体幅を指定 */
+        }
+        button {
+            height: 40px;
+            font-size: 18px;
+            padding: 0 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>URL短縮ツール</h1>
+    <form action="/shorten" method="POST">
+        <input type="url" name="original_url" placeholder="短縮したいURLを入力" required>
+        <button type="submit">短縮する</button>
+    </form>
+</body>
+</html>

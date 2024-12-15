@@ -1,0 +1,9 @@
+runtime: python39  # 使用する Python のバージョン
+entrypoint: gunicorn -b :$PORT app:app  # Flask アプリのエントリーポイント
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /.*
+  script: auto
